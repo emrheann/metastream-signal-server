@@ -6,7 +6,7 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 
 # Install dependencies
-RUN yarn install --production=false
+RUN yarn install --production=false --ignore-scripts
 
 # Copy source
 COPY . .
